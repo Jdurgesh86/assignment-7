@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n=1;
+    while(n<=1000)
+    {
+        int sum=0,count=0,power,temp,rem;
+    temp=n;
+    while(temp)
+    {
+        temp/=10;
+        count++;
+    }
+
+    power=count;
+    temp=n;
+    while(temp)
+    {
+        rem=temp%10;
+        sum=sum+pow(rem,power);
+        temp/=10;
+    }
+    if(sum==n)
+        printf(" %d ",n);
+    n++;
+
+    }
+}
